@@ -1,7 +1,7 @@
 {
   "r3m-io-event-cli": {
     "path": "r3m-io\/event",
-    "controller": "Package.R3m-Io.Event.Controller.Cli.run",
+    "controller": "Package.R3m-io.Event.Controller.Cli.run",
     "language": "en",
     "method": [
       "CLI"
