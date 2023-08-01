@@ -1,8 +1,8 @@
 {
-    "name" : "r3m-io/event",
-    "description" : "r3m-io/event see https://r3m.io for detailed usage",
+    "name" : "r3m_io/event",
+    "description" : "r3m_io/event see https://r3m.io for detailed usage",
     "type" : "library",
-    "keywords" : ["node", "r3m", "library", "framework"],
+    "keywords" : ["node", "r3m", "library", "framework", "event", "r3m.io"],
     "homepage": "https://r3m.io",
     "require" : {
         "ext-posix": "*",
@@ -13,6 +13,6 @@
     "license" : "MIT",
     "authors" : [{
         "name" : "Remco van der Velde",
-        "email" : "remco@universeorange.com"
+        "email" : "development@universeorange.com"
     }]
 }
