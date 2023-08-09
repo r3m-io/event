@@ -16,10 +16,8 @@ class Cli extends Controller {
     const DIR = __DIR__ . '/';
     const MODULE_INFO = 'Info';
     const INFO = [
-        '{{binary()}} r3m-io/node                    | Node (Object store) options',
-        '{{binary()}} r3m-io/node app                | Node (Object App) options',
-        '{{binary()}} r3m-io/node object             | Node (Object Classes) options',
-        '{{binary()}} r3m-io/node setup              | Node setup'
+        '{{binary()}} r3m_io/event                   | Event (Object store) options',
+        '{{binary()}} r3m_io/event setup             | Event setup'
     ];
 
     /**
@@ -27,6 +25,26 @@ class Cli extends Controller {
      * @throws Exception
      */
     public static function run(App $object){
+        Cli::plugin(
+            $object,
+            $object->config('project.dir.package') .
+            'R3m_io' .
+            $object->config('ds') .
+            'Node' .
+            $object->config('ds') .
+            'Plugin' .
+            $object->config('ds')
+        );
+        Cli::validator(
+            $object,
+            $object->config('project.dir.package') .
+            'R3m_io' .
+            $object->config('ds') .
+            'Node' .
+            $object->config('ds') .
+            'Validator' .
+            $object->config('ds')
+        );
         $autoload = [];
         $data = new Data();
 //        $data->set('prefix', 'Node');

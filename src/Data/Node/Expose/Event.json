@@ -1,0 +1,140 @@
+{
+    "Event": {
+        "sync": {
+            "expose": [
+                {
+                    "role": "ROLE_SYSTEM",
+                    "attributes": [
+                        "uuid",
+                        "options",
+                        "action",
+                        "#class"
+                    ],
+                    "objects": {
+                        "options": {
+                            "multiple": false,
+                            "expose": [
+                                "priority"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "list": {
+            "expose": [
+                {
+                    "role": "ROLE_SYSTEM",
+                    "attributes": [
+                        "uuid",
+                        "options",
+                        "action",
+                        "#class"
+                    ],
+                    "objects": {
+                        "options": {
+                            "multiple": false,
+                            "expose": [
+                                "priority",
+                                "command",
+                                "controller"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "read": {
+            "expose": [
+                {
+                    "role": "ROLE_SYSTEM",
+                    "attributes": [
+                        "uuid",
+                        "options",
+                        "action",
+                        "#class"
+                    ],
+                    "objects": {
+                        "options": {
+                            "multiple": false,
+                            "expose": [
+                                "priority",
+                                "command",
+                                "controller"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "record": {
+            "expose": [
+                {
+                    "role": "ROLE_SYSTEM",
+                    "attributes": [
+                        "uuid",
+                        "options",
+                        "action",
+                        "#class"
+                    ],
+                    "objects": {
+                        "options": {
+                            "multiple": false,
+                            "expose": [
+                                "priority",
+                                "command",
+                                "controller"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "create": {
+            "expose": [
+                {
+                    "role": "ROLE_SYSTEM",
+                    "attributes": [
+                        "uuid",
+                        "options",
+                        "action",
+                        "#class"
+                    ],
+                    "objects": {
+                        "options": {
+                            "multiple": false,
+                            "expose": [
+                                "priority",
+                                "command",
+                                "controller"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "put": {
+            "expose": [
+                {
+                    "role": "ROLE_SYSTEM",
+                    "attributes": [
+                        "uuid",
+                        "options",
+                        "action",
+                        "#class"
+                    ],
+                    "objects": {
+                        "options": {
+                            "multiple": false,
+                            "expose": [
+                                "priority",
+                                "command",
+                                "controller"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

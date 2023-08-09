@@ -1,0 +1,82 @@
+{
+    "Event": {
+        "create": {
+            "validate": {
+                "uuid": [
+                    {
+                        "is.uuid": true
+                    }
+                ],
+                "action": [
+                    {
+                        "is.unique": {
+                            "class": "Event",
+                            "url": "{{config('project.dir.data')}}Node\/BinaryTree\/Event\/Asc\/Asc\/Action-options.Priority.btree",
+                            "attribute": [
+                                "action",
+                                "options.priority"
+                            ]
+                        }
+                    }
+                ],
+                "options.priority": [
+                    {
+                        "integer": ">=1"
+                    },
+                    {
+                        "integer": "<=1000000000"
+                    }
+                ],
+                "options.commands": [
+                    {
+                        "is.array": true
+                    }
+                ],
+                "options.controllers": [
+                    {
+                        "is.array": true
+                    }
+                ]
+            }
+        },
+        "put": {
+            "validate": {
+                "uuid": [
+                    {
+                        "is.uuid": true
+                    }
+                ],
+                "action": [
+                    {
+                        "is.unique": {
+                            "class": "Event",
+                            "url": "{{config('project.dir.data')}}Node\/BinarySearch\/App.Event\/Asc\/Asc\/Action-options.Priority.btree",
+                            "attribute": [
+                                "action",
+                                "options.priority"
+                            ]
+                        }
+                    }
+                ],
+                "options.priority": [
+                    {
+                        "integer": ">=1"
+                    },
+                    {
+                        "integer": "<=1000000000"
+                    }
+                ],
+                "options.commands": [
+                    {
+                        "is.array": true
+                    }
+                ],
+                "options.controllers": [
+                    {
+                        "is.array": true
+                    }
+                ]
+            }
+        }
+    }
+}

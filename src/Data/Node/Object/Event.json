@@ -1,0 +1,50 @@
+{
+  "Node": {
+    "#class": "Event",
+    "type": "object",
+    "property": [
+      {
+        "name": "action",
+        "type": "string"
+      },
+      {
+        "name": "options",
+        "type": "object",
+        "property": [
+          {
+            "name": "command",
+            "type": "array"
+          },
+          {
+            "name": "controller",
+            "type": "array"
+          },
+          {
+            "name": "priority",
+            "type": "int"
+          }
+        ]
+      },
+      {
+        "name": "uuid",
+        "type": "uuid"
+      },
+      {
+        "name": "#class",
+        "type": "string"
+      }
+    ]
+  },
+  "sort": [
+    "action",
+    "options.priority",
+    "action, options.priority",
+    "options.priority, action"
+  ],
+  "is.unique": [
+    "action, options.priority"
+  ],
+  "sync" : {
+    "interval": 60
+  }
+}

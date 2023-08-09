@@ -1,5 +1,5 @@
 {{R3M}}
-{{$class = 'Server.Event'}}
+{{$class = 'Event'}}
 {{$options = options()}}
 {{if(
 $options.action &&
