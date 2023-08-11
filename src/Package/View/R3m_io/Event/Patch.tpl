@@ -23,7 +23,8 @@ R3m.Io.Node:Role:role.system(),
 ],
 "where" => [
 '(',
-'options.priority' => [
+[
+'attribute' => 'options.priority',
 'value' => 11,
 'operator' => '==='
 ],
