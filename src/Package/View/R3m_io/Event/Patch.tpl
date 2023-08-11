@@ -21,6 +21,14 @@ R3m.Io.Node:Role:role.system(),
 'options.priority' => 'ASC',
 'action' => 'ASC'
 ],
+"where" => [
+'(',
+'options.priority' => [
+'value' => 11,
+'operator' => '==='
+],
+')'
+],
 '#where' => '
 (
     options.priority === 1
@@ -37,7 +45,7 @@ R3m.Io.Node:Role:role.system(),
         action === "utyrrt"
     )
 )',
-'filter' => [
+'#filter' => [
     'action' => [
     'value' => 'test',
     'operator' => '==='
