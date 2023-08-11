@@ -1,5 +1,5 @@
 {{R3M}}
-{{$request = request()}
+{{$request = request()}}
 {{$class = 'Event'}}
 {{$options = options()}}
 {{if(!$options.page)}}
