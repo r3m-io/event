@@ -15,7 +15,7 @@ Update Event:
 {{/if}}
 {{$response = R3m.Io.Node:Data:list(
 $class,
-R3m.Io.Node:Role:role.system()
+R3m.Io.Node:Role:role.system(),
 [
 'sort' => [
 'options.priority' => 'ASC',
