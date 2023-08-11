@@ -31,27 +31,27 @@ $options.options.priority
 {{$options.priority = data.extract('options.options.priority')}}
 {{else}}
 Create Event:
-{{$options.commands = []}}
-{{$options.controllers = []}}
+{{$options.command = []}}
+{{$options.controller = []}}
 {{$action = terminal.readline('Action: ')}}
 {{$command = terminal.readline('Command: ')}}
 {{if(!is.empty($command))}}
-{{$options.commands[] = $command}}
+{{$options.command[] = $command}}
 {{/if}}
 {{while(!is.empty($command))}}
 {{$command = terminal.readline('Command: ')}}
 {{if(!is.empty($command))}}
-{{$options.commands[] = $command}}
+{{$options.command[] = $command}}
 {{/if}}
 {{/while}}
 {{$controller = terminal.readline('Controller: ')}}
 {{if(!is.empty($controller))}}
-{{$options.controllers[] = $controller}}
+{{$options.controller[] = $controller}}
 {{/if}}
 {{while(!is.empty($controller))}}
 {{$controller = terminal.readline('Controller: ')}}
 {{if(!is.empty($controller))}}
-{{$options.controllers[] = $controller}}
+{{$options.controller[] = $controller}}
 {{/if}}
 {{/while}}
 {{$options.priority = (int) terminal.readline('Priority (10): ')}}

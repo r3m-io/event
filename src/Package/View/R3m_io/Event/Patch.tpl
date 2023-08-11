@@ -1,4 +1,6 @@
 {{R3M}}
+{{$request = request()}
+{{$class = 'Event'}}
 {{$options = options()}}
 {{if(!$options.page)}}
 {{$options.page = 1}}
@@ -12,7 +14,8 @@ Update Event:
 
 {{/if}}
 {{$response = R3m.Io.Node:Data:list(
-'App.Event',
+$class,
+R3m.Io.Node:Role:role.system()
 [
 'sort' => [
 'options.priority' => 'ASC',
@@ -36,7 +39,7 @@ Update Event:
 )',
 'filter' => [
     'action' => [
-    'value' => 'yyy',
+    'value' => 'test',
     'operator' => '==='
     ]
 ],
