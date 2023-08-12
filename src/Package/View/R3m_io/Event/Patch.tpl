@@ -21,7 +21,7 @@ R3m.Io.Node:Role:role.system(),
 'options.priority' => 'ASC',
 'action' => 'ASC'
 ],
-"where" => [
+"#where" => [
 '(',
 [
 'attribute' => 'options.priority',
@@ -52,15 +52,14 @@ R3m.Io.Node:Role:role.system(),
         action === "utyrrt"
     )
 )',
-'#filter' => [
+'filter' => [
     'action' => [
     'value' => 'test',
     'operator' => '==='
     ]
 ],
 'limit' => (int) $options.limit,
-'page' => (int) $options.page,
-'ramdisk' => true
+'page' => (int) $options.page
 ])}}
 {{dd($response)}}
 
