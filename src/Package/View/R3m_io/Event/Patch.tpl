@@ -53,8 +53,8 @@ R3m.Io.Node:Role:role.system(),
     )
 )',
 'filter' => [
-    'action' => [
-    'value' => 'test',
+    'options.priority' => [
+    'value' => 11,
     'operator' => '==='
     ]
 ],
