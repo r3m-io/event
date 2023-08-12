@@ -59,7 +59,8 @@ R3m.Io.Node:Role:role.system(),
     ]
 ],
 'limit' => (int) $options.limit,
-'page' => (int) $options.page
+'page' => (int) $options.page,
+'ramdisk' => true
 ])}}
 {{dd($response)}}
 
