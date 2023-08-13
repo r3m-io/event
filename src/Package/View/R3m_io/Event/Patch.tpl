@@ -30,7 +30,7 @@
 {{/if}}
 {{$is.update.options.controller = true}}
 {{$options.controller = $controllers}}
-{/if}
+{{/if}}
 {{if($options.action)}}
 {{$action = data.extract('options.action')}}
 {{$is.update.action = true}}
