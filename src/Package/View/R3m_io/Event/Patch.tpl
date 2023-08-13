@@ -40,6 +40,25 @@
 {{$is.update.options.priority = true}}
 {{/if}}
 {{$uuid = data.extract('options.uuid')}}
+{{$node = []}}
+{{$node['uuid'] = $uuid}}
+{{$node['action'] = $action}}
+{{$node['options.priority'] = $options.priority}}
+{{$node['options.command'] = $options.command}}
+{{$node['options.controller'] = $options.controller}}
+{{dd($node)}}
+/*
+{{$response = R3m.Io.Node:Data:put(
+$class,
+R3m.Io.Node:Role:role_system(),
+[
+'uuid' => $uuid,
+'action' => $action,
+'options.priority' => $options,
+]
+)}}
+*/
+/*
 {{$response = R3m.Io.Node:Data:read(
 $class,
 R3m.Io.Node:Role:role_system(),
@@ -59,15 +78,8 @@ R3m.Io.Node:Role:role_system(),
 {{if($is.update.action)}}
 {{$response.node.options.action = $action}}
 {{/if}}
-{{$response = R3m.Io.Node:Data:put(
-$class,
-R3m.Io.Node:Role:role_system(),
-[
-
-]
-
 {{/if}}
-
+*/
 
 {{d($response)}}
 {{d($uuid)}}
