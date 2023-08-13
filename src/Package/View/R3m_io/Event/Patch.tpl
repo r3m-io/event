@@ -46,6 +46,29 @@ R3m.Io.Node:Role:role_system(),
 [
 'uuid' => $uuid,
 ])}}
+{{if($response.node)}}
+{{if($is.update.options.priority)}}
+{{$response.node.options.priority = $options.priority}}
+{{/if}}
+{{if($is.update.options.command)}}
+{{$response.node.options.command = $options.command}}
+{{/if}}
+{{if($is.update.options.controller)}}
+{{$response.node.options.controller = $options.controller}}
+{{/if}
+{{if($is.update.action)}}
+{{$response.node.options.action = $action}}
+{{/if}}
+{{$response = R3m.Io.Node:Data:put(
+$class,
+R3m.Io.Node:Role:role_system(),
+[
+
+]
+
+{{/if}}
+
+
 {{d($response)}}
 {{d($uuid)}}
 {{dd($action)}}
