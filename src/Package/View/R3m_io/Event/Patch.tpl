@@ -16,7 +16,7 @@
 {{/if}}
 {{$is.update.options.command = true}}
 {{$options.command = $commands}}
-{/if}
+{{/if}}
 {{if($options.options.controller)}}
 {{$explode_controllers = explode(',', data.extract('options.options.controller'))}}
 {{$controllers = []}}
