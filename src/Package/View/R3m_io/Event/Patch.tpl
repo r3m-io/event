@@ -45,8 +45,10 @@
 {{$node['action'] = $action}}
 {{$node['options'] = []}}
 {{$node['options']['priority'] = $options.priority}}
+/*
 {{$node['options']['command'] = $options.command}}
 {{$node['options']['controller'] = $options.controller}}
+*/
 {{dd($node)}}
 /*
 {{$response = R3m.Io.Node:Data:put(
