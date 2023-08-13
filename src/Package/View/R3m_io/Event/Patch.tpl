@@ -2,7 +2,7 @@
 {{$request = request()}}
 {{$class = 'Event'}}
 {{$options = options()}}
-{{dd($options)}}
+{{d($options)}}
 {{if($options.options.command)}}
 {{$explode_commands = explode(',', data.extract('options.options.command'))}}
 {{$commands = []}}
