@@ -35,6 +35,8 @@
 {{$action = data.extract('options.action')}}
 {{$is.update.action = true}}
 {{/if}}
+{{d($options.options)}}
+{{d($options.options.priority)}}
 {{if($options.options.priority)}}
 {{$options.priority = data.extract('options.options.priority')}}
 {{$is.update.options.priority = true}}
