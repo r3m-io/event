@@ -39,7 +39,7 @@
 {{$options.priority = data.extract('options.options.priority')}}
 {{$is.update.options.priority = true}}
 {{/if}}
-{{$uuid = data.extract('options.action')}}
+{{$uuid = data.extract('options.uuid')}}
 {{$response = R3m.Io.Node:Data:read(
 $class,
 R3m.Io.Node:Role:role_system(),
