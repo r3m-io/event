@@ -41,7 +41,6 @@
 {{$options.priority = data.extract('options.options.priority')}}
 {{$is.update.options.priority = true}}
 {{/if}}
-{{dd('{{$this}}')}}
 {{$uuid = data.extract('options.uuid')}}
 {{$node = []}}
 {{$node['uuid'] = $uuid}}
