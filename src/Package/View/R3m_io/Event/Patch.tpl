@@ -43,11 +43,11 @@
 {{$node = []}}
 {{$node['uuid'] = $uuid}}
 {{$node['action'] = $action}}
-{{$node['options'] = []}}
-{{$node['options']['priority'] = $options.priority}}
+{{$node.options = []}}
+{{$node.options['priority'] = $options.priority}}
 /*
-{{$node['options']['command'] = $options.command}}
-{{$node['options']['controller'] = $options.controller}}
+{{$node.options['command'] = $options.command}}
+{{$node.options['controller'] = $options.controller}}
 */
 {{dd($node)}}
 /*
