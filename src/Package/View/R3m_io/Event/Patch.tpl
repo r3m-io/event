@@ -2,6 +2,11 @@
 {{$request = request()}}
 {{$class = 'Event'}}
 {{$options = options()}}
+{{$response = R3m.Io.Node:Data:put(
+$class,
+R3m.Io.Node:Role:role_system(),
+$options
+)}}
 {{d($options)}}
 {{if($options.options.command)}}
 {{$explode_commands = explode(',', data.extract('options.options.command'))}}
