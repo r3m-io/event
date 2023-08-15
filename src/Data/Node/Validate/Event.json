@@ -27,12 +27,12 @@
                         "integer": "<=1000000000"
                     }
                 ],
-                "options.commands": [
+                "options.command": [
                     {
                         "is.array": true
                     }
                 ],
-                "options.controllers": [
+                "options.controller": [
                     {
                         "is.array": true
                     }
@@ -66,12 +66,12 @@
                         "integer": "<=1000000000"
                     }
                 ],
-                "options.commands": [
+                "options.command": [
                     {
                         "is.array": true
                     }
                 ],
-                "options.controllers": [
+                "options.controller": [
                     {
                         "is.array": true
                     }
