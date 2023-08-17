@@ -77,6 +77,45 @@
                     }
                 ]
             }
+        },
+        "patch": {
+            "validate": {
+                "uuid": [
+                    {
+                        "is.uuid": true
+                    }
+                ],
+                "?action": [
+                    {
+                        "is.unique": {
+                            "class": "Event",
+                            "url": "{{config('project.dir.data')}}Node\/BinarySearch\/App.Event\/Asc\/Asc\/Action-options.Priority.btree",
+                            "attribute": [
+                                "action",
+                                "options.priority"
+                            ]
+                        }
+                    }
+                ],
+                "?options.priority": [
+                    {
+                        "integer": ">=1"
+                    },
+                    {
+                        "integer": "<=1000000000"
+                    }
+                ],
+                "?options.command": [
+                    {
+                        "is.array": true
+                    }
+                ],
+                "?options.controller": [
+                    {
+                        "is.array": true
+                    }
+                ]
+            }
         }
     }
 }
