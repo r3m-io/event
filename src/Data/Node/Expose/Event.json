@@ -135,6 +135,29 @@
                     }
                 }
             ]
+        },
+        "patch": {
+            "expose": [
+                {
+                    "role": "ROLE_SYSTEM",
+                    "attributes": [
+                        "uuid",
+                        "options",
+                        "action",
+                        "#class"
+                    ],
+                    "objects": {
+                        "options": {
+                            "multiple": false,
+                            "expose": [
+                                "priority",
+                                "command",
+                                "controller"
+                            ]
+                        }
+                    }
+                }
+            ]
         }
     }
 }
