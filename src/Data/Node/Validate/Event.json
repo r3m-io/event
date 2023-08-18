@@ -50,7 +50,7 @@
                     {
                         "is.unique": {
                             "class": "Event",
-                            "url": "{{config('project.dir.data')}}Node\/BinarySearch\/App.Event\/Asc\/Asc\/Action-options.Priority.btree",
+                            "url": "{{config('project.dir.data')}}Node\/BinaryTree\/Event\/Asc\/Asc\/Action-options.Priority.btree",
                             "attribute": [
                                 "action",
                                 "options.priority"
@@ -89,7 +89,7 @@
                     {
                         "is.unique": {
                             "class": "Event",
-                            "url": "{{config('project.dir.data')}}Node\/BinarySearch\/App.Event\/Asc\/Asc\/Action-options.Priority.btree",
+                            "url": "{{config('project.dir.data')}}Node\/BinaryTree\/Event\/Asc\/Asc\/Action-options.Priority.btree",
                             "attribute": [
                                 "action",
                                 "options.priority"
