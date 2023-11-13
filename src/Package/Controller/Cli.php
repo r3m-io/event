@@ -1,5 +1,5 @@
 <?php
-namespace Package\R3m_io\Event\Controller;
+namespace Package\R3m\Io\Event\Controller;
 
 use Exception;
 use R3m\Io\App;
@@ -28,7 +28,9 @@ class Cli extends Controller {
         Cli::plugin(
             $object,
             $object->config('project.dir.package') .
-            'R3m_io' .
+            'R3m' .
+            $object->config('ds') .
+            'Io' .
             $object->config('ds') .
             'Node' .
             $object->config('ds') .
@@ -38,7 +40,9 @@ class Cli extends Controller {
         Cli::validator(
             $object,
             $object->config('project.dir.package') .
-            'R3m_io' .
+            'R3m' .
+            $object->config('ds') .
+            'Io' .
             $object->config('ds') .
             'Node' .
             $object->config('ds') .
@@ -323,6 +327,7 @@ class Cli extends Controller {
     private static function scan(App $object, $package=''): array
     {
         $package_dir = Dir::ucfirst($package);
+        ddd($package_dir);
         $scan = [
             'module' => [],
             'submodule' => [],
