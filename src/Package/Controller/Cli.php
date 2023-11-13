@@ -327,7 +327,6 @@ class Cli extends Controller {
     private static function scan(App $object, $package=''): array
     {
         $package_dir = Dir::ucfirst($package);
-        ddd($package_dir);
         $scan = [
             'module' => [],
             'submodule' => [],
