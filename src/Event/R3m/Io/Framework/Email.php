@@ -265,7 +265,9 @@ class Email {
                 $body
             )
         ) {
-            $entityManager = Database::entityManager($object_mail);
+            $entityManager = Database::entityManager($object_mail,[
+                'name' => 'api'
+            ]);
             $node = new \Entity\EmailQueue();
             $node->setObject($object_mail);
             $node->setTo($to);

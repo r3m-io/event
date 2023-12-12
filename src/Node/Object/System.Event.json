@@ -1,6 +1,6 @@
 {
   "Node": {
-    "#class": "Event",
+    "#class": "System.Event",
     "type": "object",
     "property": [
       {
@@ -23,7 +23,8 @@
             "name": "priority",
             "type": "int"
           }
-        ]
+        ],
+        "multiple": false
       },
       {
         "name": "uuid",
@@ -35,16 +36,7 @@
       }
     ]
   },
-  "sort": [
-    "action",
-    "options.priority",
-    "action, options.priority",
-    "options.priority, action"
-  ],
   "is.unique": [
     "action, options.priority"
-  ],
-  "sync" : {
-    "interval": 60
-  }
+  ]
 }

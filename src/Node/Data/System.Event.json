@@ -1,0 +1,127 @@
+{
+    "System": {
+        "Event": [
+            {
+                "action": "cli.init.run",
+                "options": {
+                    "command": [],
+                    "controller": [
+                        "Event:R3m:Io:Framework:Init:run"
+                    ],
+                    "priority": 10
+                },
+                "uuid": "d19cf20f-5fb9-473b-9d48-a23b1f7c30ef",
+                "#class": "System.Event"
+            },
+            {
+                "action": "cli.log.archive",
+                "options": {
+                    "command": [],
+                    "controller": [
+                        "Event:R3m:Io:Framework:Log:archive"
+                    ],
+                    "priority": 10
+                },
+                "uuid": "c91f1bb9-533c-4f97-8be9-994a55b8b4f1",
+                "#class": "System.Event"
+            },
+            {
+                "action": "cli.system.restart",
+                "options": {
+                    "command": [],
+                    "controller": [
+                        "Event:R3m:Io:System:Restart:execute"
+                    ],
+                    "priority": 10
+                },
+                "uuid": "2ef27a7d-fab3-4b8b-9cec-08f1eba04dd9",
+                "#class": "System.Event"
+            },
+            {
+                "action": "cli.system.restart.notification",
+                "options": {
+                    "command": [],
+                    "controller": [
+                        "Event:R3m:Io:System:Restart:notification"
+                    ],
+                    "priority": 10
+                },
+                "uuid": "4d606b10-01f0-4ba6-8f5e-61f6a38f7aa1",
+                "#class": "System.Event"
+            },
+            {
+                "action": "cli.system.update",
+                "options": {
+                    "command": [
+                        "{{binary()}} init --restore-git",
+                        "{{binary()}} r3m-io\/priya update"
+                    ],
+                    "controller": [],
+                    "priority": 10
+                },
+                "uuid": "aaa81d5f-b85d-4b37-a60e-e2f157dbbb0a",
+                "#class": "System.Event"
+            },
+            {
+                "action": "cli.system.update.notification",
+                "options": {
+                    "command": [],
+                    "controller": [
+                        "Event:R3m:Io:System:Update:notification"
+                    ],
+                    "priority": 10
+                },
+                "uuid": "38df6c3e-f97e-489c-b91b-130d083f65dd",
+                "#class": "System.Event"
+            },
+            {
+                "action": "parse.build.write",
+                "options": {
+                    "command": [],
+                    "controller": [
+                        "Event:R3m:Io:Framework:Parse:Build:write"
+                    ],
+                    "priority": 10
+                },
+                "uuid": "6c1a34c8-fe7b-4616-bebf-8c4a9a929757",
+                "#class": "System.Event"
+            },
+            {
+                "action": "parse.build.write.error",
+                "options": {
+                    "command": [],
+                    "controller": [
+                        "Event:R3m:Io:Framework:Parse:Build:exception"
+                    ],
+                    "priority": 10
+                },
+                "uuid": "284294f2-f64a-4ad5-8bdc-e826492f91a1",
+                "#class": "System.Event"
+            },
+            {
+                "action": "parse.compile.exception",
+                "options": {
+                    "command": [],
+                    "controller": [
+                        "Event:R3m:Io:Framework:Parse:Build:exception"
+                    ],
+                    "priority": 10
+                },
+                "uuid": "82cde87f-f773-48df-9e78-5684fd30b5f2",
+                "#class": "System.Event"
+            },
+            {
+                "action": "r3m.io.node.data.create.error",
+                "options": {
+                    "command": [],
+                    "controller": [
+                        "Event:R3m:Io:Node:Create:error"
+                    ],
+                    "priority": 10
+                },
+                "uuid": "5c351155-deb6-449d-97ee-3ce8778d01b7",
+                "#class": "System.Event"
+            }
+        ]
+    }
+}
