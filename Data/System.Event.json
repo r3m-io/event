@@ -10,7 +10,6 @@
                     ],
                     "priority": 10
                 },
-                "uuid": "d19cf20f-5fb9-473b-9d48-a23b1f7c30ef",
                 "#class": "System.Event"
             },
             {
@@ -22,7 +21,6 @@
                     ],
                     "priority": 10
                 },
-                "uuid": "c91f1bb9-533c-4f97-8be9-994a55b8b4f1",
                 "#class": "System.Event"
             },
             {
@@ -34,7 +32,6 @@
                     ],
                     "priority": 10
                 },
-                "uuid": "2ef27a7d-fab3-4b8b-9cec-08f1eba04dd9",
                 "#class": "System.Event"
             },
             {
@@ -46,7 +43,6 @@
                     ],
                     "priority": 10
                 },
-                "uuid": "4d606b10-01f0-4ba6-8f5e-61f6a38f7aa1",
                 "#class": "System.Event"
             },
             {
@@ -59,7 +55,6 @@
                     "controller": [],
                     "priority": 10
                 },
-                "uuid": "aaa81d5f-b85d-4b37-a60e-e2f157dbbb0a",
                 "#class": "System.Event"
             },
             {
@@ -71,7 +66,6 @@
                     ],
                     "priority": 10
                 },
-                "uuid": "38df6c3e-f97e-489c-b91b-130d083f65dd",
                 "#class": "System.Event"
             },
             {
@@ -83,7 +77,6 @@
                     ],
                     "priority": 10
                 },
-                "uuid": "6c1a34c8-fe7b-4616-bebf-8c4a9a929757",
                 "#class": "System.Event"
             },
             {
@@ -95,7 +88,6 @@
                     ],
                     "priority": 10
                 },
-                "uuid": "284294f2-f64a-4ad5-8bdc-e826492f91a1",
                 "#class": "System.Event"
             },
             {
@@ -107,7 +99,6 @@
                     ],
                     "priority": 10
                 },
-                "uuid": "82cde87f-f773-48df-9e78-5684fd30b5f2",
                 "#class": "System.Event"
             },
             {
@@ -119,7 +110,6 @@
                     ],
                     "priority": 10
                 },
-                "uuid": "5c351155-deb6-449d-97ee-3ce8778d01b7",
                 "#class": "System.Event"
             }
         ]

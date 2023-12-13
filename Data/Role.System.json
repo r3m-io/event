@@ -1,0 +1,77 @@
+{
+  "name" : "ROLE_SYSTEM",
+  "rank" : 1,
+  "#class": "Account.Role",
+  "permission": [
+    {
+      "name": "System:Event:record",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:record.relation",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:create",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:count",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:count.relation",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:read",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:read.relation",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:put",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:patch",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:page",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:page.relation",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:list",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:list.relation",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:rename",
+      "attribute": [],
+      "#class": "Account.Permission"
+    }
+  ]
+}
