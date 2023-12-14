@@ -92,7 +92,7 @@ class Doctrine {
             return;
         }
         $command = '{{binary()}} doctrine orm:generate-proxies';
-        $command = str_replace('{{binary()}}', Core::binary(), $command);
+        $command = str_replace('{{binary()}}', Core::binary($object), $command);
         Core::execute($object, $command);
     }
 

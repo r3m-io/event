@@ -22,7 +22,7 @@ class Restore {
             Dir::remove($object->config('project.dir.public'));
         }
         $command = '{{binary()}} configure public create ' . $object->config('dictionary.public');
-        $command = str_replace('{{binary()}}', Core::binary(), $command);
+        $command = str_replace('{{binary()}}', Core::binary($object), $command);
         Core::execute($object, $command);
     }
 

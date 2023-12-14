@@ -43,7 +43,7 @@ class LetsEncrypt {
         exec('apt-get install certbot python3-certbot-apache -y');
         $source = $object->config('project.dir.data') . 'Letsencrypt/Letsencrypt.zip';
         if(File::exist($source)){
-            $command = Core::binary() . ' zip extract ' . $source . ' /';
+            $command = Core::binary($object) . ' zip extract ' . $source . ' /';
             exec($command, $output);
             echo implode(PHP_EOL, $output) . PHP_EOL;
         }
