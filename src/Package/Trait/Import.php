@@ -23,6 +23,9 @@ trait Import {
             $class .
             $object->config('extension.json')
         ;
+        //create_many
+        //put_many
+        //patch_many
         ddd($url);
     }
 }
