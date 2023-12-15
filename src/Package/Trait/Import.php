@@ -14,7 +14,7 @@ trait Import {
     /**
      * @throws Exception
      */
-    public function action(): void
+    public function event_action(): void
     {
         $object = $this->object();
         $class = 'System.Event.Action';
