@@ -28,6 +28,19 @@
                         }
                     ]
                 },
+                "create_many": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "action",
+                                "readme"
+                            ]
+                        }
+                    ]
+                },
                 "list": {
                     "expose": [
                         {

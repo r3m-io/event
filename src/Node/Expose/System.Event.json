@@ -139,6 +139,29 @@
                     }
                 ]
             },
+            "create_many": {
+                "expose": [
+                    {
+                        "role": "ROLE_SYSTEM",
+                        "property": [
+                            "uuid",
+                            "options",
+                            "action",
+                            "#class"
+                        ],
+                        "object": {
+                            "options": {
+                                "multiple": false,
+                                "expose": [
+                                    "priority",
+                                    "command",
+                                    "controller"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
             "put": {
                 "expose": [
                     {
