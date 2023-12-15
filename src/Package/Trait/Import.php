@@ -18,7 +18,6 @@ trait Import {
     {
         $object = $this->object();
         $options = App::options($object);
-        ddd($options);
         $class = 'System.Event.Action';
         $url = $object->config('project.dir.vendor') .
             'r3m_io/event/Data/' .
@@ -27,6 +26,8 @@ trait Import {
         ;
         $data = $object->data_read($url);
         $node = new Node($object);
+        $create_many = [];
+        $put_many = [];
         if($data){
             foreach($data->data($class) as $nr => $record){
                 $record_options = [
@@ -39,10 +40,19 @@ trait Import {
                     ]
                 ];
                 $response = $node->record($class, $node->role_system(), $record_options);
-                d($response);
-                d($record);
-
+                if(!$response){
+                    $create_many[] = $record;
+                }
+                elseif(property_exists('force', $options)){
+                    $put_many[] = $record;
+                }
             }
+        }
+        if(!empty($create_many)){
+            $response = $node->create_many($class, $node->role_system(), $create_many);
+        }
+        if(!empty($put_many)){
+            $response = $node->put_many($class, $node->role_system(), $put_many);
         }
         //create_many
         //put_many
