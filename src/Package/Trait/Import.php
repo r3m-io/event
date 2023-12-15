@@ -50,7 +50,7 @@ trait Import {
                 if(!$response){
                     $create_many[] = $record;
                 }
-                elseif(property_exists('force', $options)){
+                elseif(property_exists($options,'force')){
                     $put_many[] = $record;
                 }
             }
