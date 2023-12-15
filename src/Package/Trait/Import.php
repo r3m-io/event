@@ -17,6 +17,8 @@ trait Import {
     public function event_action(): void
     {
         $object = $this->object();
+        $options = App::options($object);
+        ddd($options);
         $class = 'System.Event.Action';
         $url = $object->config('project.dir.vendor') .
             'r3m_io/event/Data/' .
@@ -24,8 +26,20 @@ trait Import {
             $object->config('extension.json')
         ;
         $data = $object->data_read($url);
+        $node = new Node($object);
         if($data){
             foreach($data->data($class) as $nr => $record){
+                $record_options = [
+                    'where' => [
+                        [
+                            'value' => $record->action,
+                            'attribute' => 'action',
+                            'operator' => '===',
+                        ]
+                    ]
+                ];
+                $response = $node->record($class, $node->role_system(), $record_options);
+                d($response);
                 d($record);
 
             }
