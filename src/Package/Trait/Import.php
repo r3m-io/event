@@ -57,9 +57,11 @@ trait Import {
         }
         if(!empty($create_many)){
             $response = $node->create_many($class, $node->role_system(), $create_many);
+            d($response);
         }
         if(!empty($put_many)){
             $response = $node->put_many($class, $node->role_system(), $put_many);
+            d($response);
         }
         //create_many
         //put_many
