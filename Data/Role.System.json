@@ -19,6 +19,11 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Event:create.many",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Event:count",
       "attribute": [],
       "#class": "Account.Permission"
@@ -85,6 +90,11 @@
     },
     {
       "name": "System:Event:Action:create",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:create.many",
       "attribute": [],
       "#class": "Account.Permission"
     },
