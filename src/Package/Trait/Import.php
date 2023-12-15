@@ -23,7 +23,7 @@ trait Import {
             $class .
             $object->config('extension.json')
         ;
-        $data = $object->read($url);
+        $data = $object->data_read($url);
         if($data){
             foreach($data->data($class) as $nr => $record){
                 d($record);
