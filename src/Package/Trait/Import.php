@@ -23,6 +23,13 @@ trait Import {
             $class .
             $object->config('extension.json')
         ;
+        $data = $object->read($url);
+        if($data){
+            foreach($data->data($class) as $nr => $record){
+                d($record);
+
+            }
+        }
         //create_many
         //put_many
         //patch_many
