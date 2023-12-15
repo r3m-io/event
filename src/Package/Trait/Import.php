@@ -9,12 +9,12 @@ use R3m\Io\Module\File;
 use R3m\Io\Node\Model\Node;
 
 use Exception;
-trait Init {
+trait Import {
 
     /**
      * @throws Exception
      */
-    public function action()
+    public function action(): void
     {
         $object = $this->object();
         $class = 'System.Event.Action';
