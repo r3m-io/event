@@ -1,5 +1,7 @@
 {{R3M}}
-{{Package.R3m.Io.Event:Init:register()}}
-
+{{$register = Package.R3m.Io.Event:Init:register()}}
+{{if(!is.empty($register))}}
+{{Package.R3m.Io.Event:Import:action()}}
 Import System.Event.Action
 Import System.Event
+{{/if}}

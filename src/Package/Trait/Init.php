@@ -14,9 +14,10 @@ trait Init {
     /**
      * @throws Exception
      */
-    public function register(): void
+    public function register(): bool
     {
         $object = $this->object();
+        $status = false;
         $options = App::options($object);
         $node = new Node($object);
         $record_options = [
@@ -39,6 +40,7 @@ trait Init {
                 $record->mtime = time();
                 $response = $node->put($class, $node->role_system(), $record);
                 echo 'Register update ' . $object->request('package') . ' installation...' . PHP_EOL;
+                $status = true;
             } else {
                 echo 'Skipping ' . $object->request('package') . ' installation...' . PHP_EOL;
             }
@@ -51,6 +53,8 @@ trait Init {
             ];
             $response = $node->create($class, $node->role_system(), $record);
             echo 'Registering ' . $object->request('package') . ' installation...' . PHP_EOL;
+            $status = true;
         }
+        return $status;
     }
 }
