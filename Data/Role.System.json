@@ -72,6 +72,76 @@
       "name": "System:Event:rename",
       "attribute": [],
       "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:record",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:record.relation",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:create",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:count",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:count.relation",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:read",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:read.relation",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:put",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:patch",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:page",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:page.relation",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:list",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:list.relation",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:rename",
+      "attribute": [],
+      "#class": "Account.Permission"
     }
   ]
 }
