@@ -50,7 +50,14 @@ trait Import {
                 if(!$response){
                     $create_many[] = $record;
                 }
-                elseif(property_exists($options,'force')){
+                elseif(
+                    property_exists($options,'force') &&
+                    array_key_exists('node', $response) &&
+                    is_object($response['node']) &&
+                    property_exists($response['node'], 'uuid') &&
+                    !empty($response['node']->uuid)
+                ){
+                    $record->uuid = $response['node']->uuid;
                     $put_many[] = $record;
                 }
             }
