@@ -49,7 +49,17 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Event:put.many",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Event:patch",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:patch.many",
       "attribute": [],
       "#class": "Account.Permission"
     },
@@ -124,7 +134,17 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Event:Action:put.many",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Event:Action:patch",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:patch.many",
       "attribute": [],
       "#class": "Account.Permission"
     },
