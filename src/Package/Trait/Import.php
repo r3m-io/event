@@ -26,11 +26,14 @@ trait Import {
         $object = $this->object();
         $options = App::options($object);
         $class = 'System.Event.Action';
-        $url = $object->config('project.dir.vendor') .
+        $options->url = $object->config('project.dir.vendor') .
             'r3m_io/event/Data/' .
             $class .
             $object->config('extension.json')
         ;
+        $node = new Node($object);
+        $node->import($class, $node->role_system(), $options);
+        /*
         $data = $object->data_read($url);
         $node = new Node($object);
         $create_many = [];
@@ -44,7 +47,8 @@ trait Import {
                             'attribute' => 'action',
                             'operator' => '===',
                         ]
-                    ]
+                    ],
+                    'process' => 'record?, list!'
                 ];
                 $response = $node->record($class, $node->role_system(), $record_options);
                 if(!$response){
@@ -63,13 +67,18 @@ trait Import {
             }
         }
         if(!empty($create_many)){
-            $response = $node->create_many($class, $node->role_system(), $create_many);
+            $response = $node->create_many($class, $node->role_system(), $create_many, [
+                'process' => 'always true with many?'
+            ]);
             d($response);
         }
         if(!empty($put_many)){
-            $response = $node->put_many($class, $node->role_system(), $put_many);
+            $response = $node->put_many($class, $node->role_system(), $put_many, [
+                'process' => 'always true with many?'
+            ]);
             d($response);
         }
+        */
         //create_many
         //put_many
         //patch_many
