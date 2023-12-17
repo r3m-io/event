@@ -82,6 +82,5 @@ trait Import {
         //create_many
         //put_many
         //patch_many
-        ddd($url);
     }
 }
