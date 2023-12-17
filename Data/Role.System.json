@@ -4,6 +4,11 @@
   "#class": "Account.Role",
   "permission": [
     {
+      "name": "System:Event:import",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Event:record",
       "attribute": [],
       "#class": "Account.Permission"
@@ -85,6 +90,11 @@
     },
     {
       "name": "System:Event:rename",
+      "attribute": [],
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:import",
       "attribute": [],
       "#class": "Account.Permission"
     },
