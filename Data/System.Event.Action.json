@@ -324,7 +324,7 @@
                 },
                 {
                     "action": "r3m.io.node.data.create.error",
-                    "readme": "test",
+                    "readme": "",
                     "#class": "System.Event.Action"
                 }
             ]
