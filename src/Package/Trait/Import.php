@@ -32,7 +32,8 @@ trait Import {
             $object->config('extension.json')
         ;
         $node = new Node($object);
-        $node->import($class, $node->role_system(), $options);
+        $response = $node->import($class, $node->role_system(), $options);
+        dd($response);
         /*
         $data = $object->data_read($url);
         $node = new Node($object);
