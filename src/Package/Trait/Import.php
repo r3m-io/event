@@ -35,11 +35,15 @@ trait Import {
         $response = $node->import($class, $node->role_system(), $options);
         if(
             $response &&
+            array_key_exists('create', $response) &&
+            array_key_exists('put', $response) &&
+            array_key_exists('patch', $response) &&
             array_key_exists('commit', $response) &&
             array_key_exists('speed', $response['commit']) &&
             array_key_exists('item_per_second', $response)
         ){
-            echo 'Imported ' . $response['item_per_second'] . ' items/sec at ' . $response['commit']['speed'] . PHP_EOL;
+            $total = $response['create'] + $response['put'] + $response['patch'];
+            echo 'Imported ' . $total .' at ' . $response['item_per_second'] . ' items/sec (' . $response['commit']['speed'] . ')' . PHP_EOL;
         }
     }
 }
