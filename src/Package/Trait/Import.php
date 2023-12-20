@@ -33,55 +33,13 @@ trait Import {
         ;
         $node = new Node($object);
         $response = $node->import($class, $node->role_system(), $options);
-        ddd($response);
-        /*
-        $data = $object->data_read($url);
-        $node = new Node($object);
-        $create_many = [];
-        $put_many = [];
-        if($data){
-            foreach($data->data($class) as $nr => $record){
-                $record_options = [
-                    'where' => [
-                        [
-                            'value' => $record->action,
-                            'attribute' => 'action',
-                            'operator' => '===',
-                        ]
-                    ],
-                    'process' => 'record?, list!'
-                ];
-                $response = $node->record($class, $node->role_system(), $record_options);
-                if(!$response){
-                    $create_many[] = $record;
-                }
-                elseif(
-                    property_exists($options,'force') &&
-                    array_key_exists('node', $response) &&
-                    is_object($response['node']) &&
-                    property_exists($response['node'], 'uuid') &&
-                    !empty($response['node']->uuid)
-                ){
-                    $record->uuid = $response['node']->uuid;
-                    $put_many[] = $record;
-                }
-            }
+        if(
+            $response &&
+            array_key_exists('commit', $response) &&
+            array_key_exists('speed', $response['commit']) &&
+            array_key_exists('item_per_second', $response)
+        ){
+            echo 'Imported ' . $response['item_per_second'] . ' items/sec at ' . $response['commit']['speed'] . PHP_EOL;
         }
-        if(!empty($create_many)){
-            $response = $node->create_many($class, $node->role_system(), $create_many, [
-                'process' => 'always true with many?'
-            ]);
-            d($response);
-        }
-        if(!empty($put_many)){
-            $response = $node->put_many($class, $node->role_system(), $put_many, [
-                'process' => 'always true with many?'
-            ]);
-            d($response);
-        }
-        */
-        //create_many
-        //put_many
-        //patch_many
     }
 }
