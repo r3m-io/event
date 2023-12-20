@@ -41,7 +41,15 @@ trait Init {
                 $response = $node->put($class, $node->role_system(), $record);
                 echo 'Register update ' . $object->request('package') . ' installation...' . PHP_EOL;
                 $status = true;
-            } else {
+            }
+            elseif(property_exists($options, 'patch')){
+                $record = $response['node'];
+                $record->mtime = time();
+                $response = $node->put($class, $node->role_system(), $record);
+                echo 'Register update ' . $object->request('package') . ' installation...' . PHP_EOL;
+                $status = true;
+            }
+            else {
                 echo 'Skipping ' . $object->request('package') . ' installation...' . PHP_EOL;
             }
         } else {
