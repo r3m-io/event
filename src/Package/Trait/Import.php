@@ -33,7 +33,7 @@ trait Import {
         ;
         $node = new Node($object);
         $response = $node->import($class, $node->role_system(), $options);
-        dd($response);
+        ddd($response);
         /*
         $data = $object->data_read($url);
         $node = new Node($object);
