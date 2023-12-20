@@ -44,9 +44,9 @@ trait Import {
         ){
             $total = $response['create'] + $response['put'] + $response['patch'];
             if($total === 1){
-                echo 'Imported (' . $class . ') ' . $total .' item at ' . $response['item_per_second'] . ' items/sec (' . $response['commit']['speed'] . ')' . PHP_EOL;
+                echo 'Imported ' . $total .' item (' . $class . ') at ' . $response['item_per_second'] . ' items/sec (' . $response['commit']['speed'] . ')' . PHP_EOL;
             } else {
-                echo 'Imported (' . $class . ') ' . $total .' items at ' . $response['item_per_second'] . ' items/sec (' . $response['commit']['speed'] . ')' . PHP_EOL;
+                echo 'Imported ' . $total .' items (' . $class . ') at ' . $response['item_per_second'] . ' items/sec (' . $response['commit']['speed'] . ')' . PHP_EOL;
             }
 
         }
