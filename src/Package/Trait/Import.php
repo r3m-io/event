@@ -48,7 +48,6 @@ trait Import {
             } else {
                 echo 'Imported ' . $total .' items (' . $class . ') at ' . $response['item_per_second'] . ' items/sec (' . $response['commit']['speed'] . ')' . PHP_EOL;
             }
-
         }
     }
 }

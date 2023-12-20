@@ -80,7 +80,33 @@
                         }
                     ]
                 },
+                "patch_many": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "action",
+                                "readme"
+                            ]
+                        }
+                    ]
+                },
                 "put": {
+                    "expose": [
+                        {
+                            "role": "ROLE_SYSTEM",
+                            "property": [
+                                "uuid",
+                                "#class",
+                                "action",
+                                "readme"
+                            ]
+                        }
+                    ]
+                },
+                "put_many": {
                     "expose": [
                         {
                             "role": "ROLE_SYSTEM",
