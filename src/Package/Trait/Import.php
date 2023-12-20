@@ -43,7 +43,12 @@ trait Import {
             array_key_exists('item_per_second', $response)
         ){
             $total = $response['create'] + $response['put'] + $response['patch'];
-            echo 'Imported ' . $total .' at ' . $response['item_per_second'] . ' items/sec (' . $response['commit']['speed'] . ')' . PHP_EOL;
+            if($total === 1){
+                echo 'Imported ' . $total .' item at ' . $response['item_per_second'] . ' items/sec (' . $response['commit']['speed'] . ')' . PHP_EOL;
+            } else {
+                echo 'Imported ' . $total .' items at ' . $response['item_per_second'] . ' items/sec (' . $response['commit']['speed'] . ')' . PHP_EOL;
+            }
+
         }
     }
 }
