@@ -44,9 +44,39 @@ trait Import {
         ){
             $total = $response['create'] + $response['put'] + $response['patch'];
             if($total === 1){
-                echo 'Imported ' . $total .' item (' . $class . ') at ' . $response['item_per_second'] . ' items/sec (' . $response['commit']['speed'] . ')' . PHP_EOL;
+                echo 'Imported ' .
+                    $total .
+                    ' (create: ' .
+                    $response['create'] .
+                    ', put: ' .
+                    $response['put'] .
+                    ', patch: ' .
+                    $response['patch'] .
+                    ') item (' .
+                    $class .
+                    ') at ' .
+                    $response['item_per_second'] .
+                    ' items/sec (' .
+                    $response['commit']['speed'] . ')' .
+                    PHP_EOL
+                ;
             } else {
-                echo 'Imported ' . $total .' items (' . $class . ') at ' . $response['item_per_second'] . ' items/sec (' . $response['commit']['speed'] . ')' . PHP_EOL;
+                echo 'Imported ' .
+                    $total .
+                    ' (create: ' .
+                    $response['create'] .
+                    ', put: ' .
+                    $response['put'] .
+                    ', patch: ' .
+                    $response['patch'] .
+                    ') items (' .
+                    $class .
+                    ') at ' .
+                    $response['item_per_second'] .
+                    ' items/sec (' .
+                    $response['commit']['speed'] . ')' .
+                    PHP_EOL
+                ;
             }
         }
     }
@@ -77,9 +107,39 @@ trait Import {
         ){
             $total = $response['create'] + $response['put'] + $response['patch'];
             if($total === 1){
-                echo 'Imported ' . $total . ' (create: ' . $response['create'] . ', put: ' . $response['put'] . ', patch: ' . $response['patch'] .') item (' . $class . ') at ' . $response['item_per_second'] . ' items/sec (' . $response['commit']['speed'] . ')' . PHP_EOL;
+                echo 'Imported ' .
+                    $total .
+                    ' (create: ' .
+                    $response['create'] .
+                    ', put: ' .
+                    $response['put'] .
+                    ', patch: ' .
+                    $response['patch'] .
+                    ') item (' .
+                    $class .
+                    ') at ' .
+                    $response['item_per_second'] .
+                    ' items/sec (' .
+                    $response['commit']['speed'] . ')' .
+                    PHP_EOL
+                ;
             } else {
-                echo 'Imported ' . $total . ' (create: ' . $response['create'] . ', put: ' . $response['put'] . ', patch: ' . $response['patch'] .') items (' . $class . ') at ' . $response['item_per_second'] . ' items/sec (' . $response['commit']['speed'] . ')' . PHP_EOL;
+                echo 'Imported ' .
+                    $total .
+                    ' (create: ' .
+                    $response['create'] .
+                    ', put: ' .
+                    $response['put'] .
+                    ', patch: ' .
+                    $response['patch'] .
+                    ') items (' .
+                    $class .
+                    ') at ' .
+                    $response['item_per_second'] .
+                    ' items/sec (' .
+                    $response['commit']['speed'] . ')' .
+                    PHP_EOL
+                ;
             }
         }
     }
