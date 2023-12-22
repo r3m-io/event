@@ -14,8 +14,11 @@ trait Import {
     public function role_system(): void
     {
         $object = $this->object();
-        $node = new Node($object);
-        $node->role_system_create('r3m_io/event');
+        $package = $object->request('package');
+        if($package){
+            $node = new Node($object);
+            $node->role_system_create($package);
+        }
     }
 
     /**
@@ -24,61 +27,20 @@ trait Import {
     public function event_action(): void
     {
         $object = $this->object();
-        $options = App::options($object);
-        $class = 'System.Event.Action';
-        $options->url = $object->config('project.dir.vendor') .
-            'r3m_io/event/Data/' .
-            $class .
-            $object->config('extension.json')
-        ;
-        $node = new Node($object);
-        $response = $node->import($class, $node->role_system(), $options);
-        if(
-            $response &&
-            array_key_exists('create', $response) &&
-            array_key_exists('put', $response) &&
-            array_key_exists('patch', $response) &&
-            array_key_exists('commit', $response) &&
-            array_key_exists('speed', $response['commit']) &&
-            array_key_exists('item_per_second', $response)
-        ){
-            $total = $response['create'] + $response['put'] + $response['patch'];
-            if($total === 1){
-                echo 'Imported ' .
-                    $total .
-                    ' (create: ' .
-                    $response['create'] .
-                    ', put: ' .
-                    $response['put'] .
-                    ', patch: ' .
-                    $response['patch'] .
-                    ') item (' .
-                    $class .
-                    ') at ' .
-                    $response['item_per_second'] .
-                    ' items/sec (' .
-                    $response['commit']['speed'] . ')' .
-                    PHP_EOL
-                ;
-            } else {
-                echo 'Imported ' .
-                    $total .
-                    ' (create: ' .
-                    $response['create'] .
-                    ', put: ' .
-                    $response['put'] .
-                    ', patch: ' .
-                    $response['patch'] .
-                    ') items (' .
-                    $class .
-                    ') at ' .
-                    $response['item_per_second'] .
-                    ' items/sec (' .
-                    $response['commit']['speed'] . ')' .
-                    PHP_EOL
-                ;
-            }
+        $package = $object->request('package');
+        if($package){
+            $options = App::options($object);
+            $class = 'System.Event.Action';
+            $options->url = $object->config('project.dir.vendor') .
+                $package . '/Data/' .
+                $class .
+                $object->config('extension.json')
+            ;
+            $node = new Node($object);
+            $response = $node->import($class, $node->role_system(), $options);
+            $node->stats($class, $response);
         }
+
     }
 
     /**
@@ -87,60 +49,19 @@ trait Import {
     public function event(): void
     {
         $object = $this->object();
-        $options = App::options($object);
-        $class = 'System.Event';
-        $options->url = $object->config('project.dir.vendor') .
-            'r3m_io/event/Data/' .
-            $class .
-            $object->config('extension.json')
-        ;
-        $node = new Node($object);
-        $response = $node->import($class, $node->role_system(), $options);
-        if(
-            $response &&
-            array_key_exists('create', $response) &&
-            array_key_exists('put', $response) &&
-            array_key_exists('patch', $response) &&
-            array_key_exists('commit', $response) &&
-            array_key_exists('speed', $response['commit']) &&
-            array_key_exists('item_per_second', $response)
-        ){
-            $total = $response['create'] + $response['put'] + $response['patch'];
-            if($total === 1){
-                echo 'Imported ' .
-                    $total .
-                    ' (create: ' .
-                    $response['create'] .
-                    ', put: ' .
-                    $response['put'] .
-                    ', patch: ' .
-                    $response['patch'] .
-                    ') item (' .
-                    $class .
-                    ') at ' .
-                    $response['item_per_second'] .
-                    ' items/sec (' .
-                    $response['commit']['speed'] . ')' .
-                    PHP_EOL
-                ;
-            } else {
-                echo 'Imported ' .
-                    $total .
-                    ' (create: ' .
-                    $response['create'] .
-                    ', put: ' .
-                    $response['put'] .
-                    ', patch: ' .
-                    $response['patch'] .
-                    ') items (' .
-                    $class .
-                    ') at ' .
-                    $response['item_per_second'] .
-                    ' items/sec (' .
-                    $response['commit']['speed'] . ')' .
-                    PHP_EOL
-                ;
-            }
+        $package = $object->request('package');
+        if($package){
+            $options = App::options($object);
+            $class = 'System.Event';
+            $options->url = $object->config('project.dir.vendor') .
+                $package . '/Data/' .
+                $class .
+                $object->config('extension.json')
+            ;
+            $node = new Node($object);
+            $response = $node->import($class, $node->role_system(), $options);
+            $node->stats($class, $response);
         }
+
     }
 }
