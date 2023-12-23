@@ -36,6 +36,14 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Event:delete",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:delete.many",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Event:read",
       "#class": "Account.Permission"
     },
@@ -109,6 +117,14 @@
     },
     {
       "name": "System:Event:Action:commit",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:delete",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action:delete.many",
       "#class": "Account.Permission"
     },
     {
