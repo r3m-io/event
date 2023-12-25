@@ -76,6 +76,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Event:property.delete",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Event:list",
       "#class": "Account.Permission"
     },
@@ -126,7 +130,7 @@
     {
       "name": "System:Event:Action:delete.many",
       "#class": "Account.Permission"
-    },
+    },1
     {
       "name": "System:Event:Action:read",
       "#class": "Account.Permission"
@@ -157,6 +161,10 @@
     },
     {
       "name": "System:Event:Action:page.relation",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Event:Action::property.delete",
       "#class": "Account.Permission"
     },
     {
