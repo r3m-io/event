@@ -130,7 +130,7 @@
     {
       "name": "System:Event:Action:delete.many",
       "#class": "Account.Permission"
-    },1
+    },
     {
       "name": "System:Event:Action:read",
       "#class": "Account.Permission"
