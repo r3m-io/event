@@ -11,25 +11,6 @@ use Exception;
 
 class Init {
 
-    const FLAG_CONFIGURE_PUBLIC_CREATE = 'configure-public-create';
-    const FLAG_RESTORE_PUBLIC_CREATE = 'restore-public-create';
-    const FLAG_RESTORE_SSH = 'restore-ssh';
-    const FLAG_RESTORE_LETS_ENCRYPT = 'restore-lets-encrypt';
-    const FLAG_BACKUP_APACHE2 = 'backup-apache2';
-    const FLAG_CONFIGURE_APACHE2 = 'configure-apache2';
-    const FLAG_RESTORE_APACHE2 = 'restore-apache2';
-    const FLAG_RESTART_APACHE2 = 'restart-apache2';
-    const FLAG_CONFIGURE_DOCTRINE = 'configure-doctrine';
-    const FLAG_RESTORE_DOCTRINE = 'restore-doctrine';
-    const FLAG_DOCTRINE_ORM_GENERATE_PROXIES = 'doctrine-orm:generate-proxies';
-    const FLAG_RESTART_PHP = 'restart-php';
-    const FLAG_BACKUP_PHP = 'backup-php';
-    const FLAG_RESTORE_PHP = 'restore-php';
-    const FLAG_INSTALL_CRON = 'install-cron';
-    const FLAG_RESTART_CRON = 'restart-cron';
-    const FLAG_START_CRON = 'start-cron';
-    const FLAG_RESTART_SYSTEM = 'restart-system';
-
     /**
      * @throws Exception
      */

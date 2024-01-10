@@ -326,6 +326,11 @@
                     "action": "r3m.io.node.data.create.error",
                     "readme": "",
                     "#class": "System.Event.Action"
+                },
+                {
+                    "action": "r3m.io.server.public.create",
+                    "readme": "",
+                    "#class": "System.Event.Action"
                 }
             ]
         }

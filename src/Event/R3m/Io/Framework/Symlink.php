@@ -31,6 +31,9 @@ class Symlink {
                     ){
                         $source = $record->source;
                         $destination = $record->destination;
+                        if(substr($destination, -1, 1) === '/'){
+                            $destination = substr($destination, 0, -1);
+                        }
                         if(File::exist($destination)){
                             File::delete($destination);
                         }
@@ -38,10 +41,6 @@ class Symlink {
                         $source = str_replace(Dir::name($source), '', $source);
                         $destination = str_replace(Dir::name($destination), '', $destination);
                         File::link($source, $destination);
-                        $destination = $record->destination;
-                        if(substr($destination, -1, 1) === '/'){
-                            $destination = substr($destination, 0, -1);
-                        }
                     }
                 }
             }

@@ -7,8 +7,13 @@ use R3m\Io\Config;
 
 use R3m\Io\Module\File;
 
+use Exception;
+
 class Git {
 
+    /**
+     * @throws Exception
+     */
     public static function configure(App $object, $event, $options=[]): void
     {
         if($object->config(Config::POSIX_ID) !== 0){
@@ -22,6 +27,9 @@ class Git {
         }
     }
 
+    /**
+     * @throws Exception
+     */
     public static function restore(App $object, $event, $options=[]): void
     {
         if($object->config(Config::POSIX_ID) !== 0){

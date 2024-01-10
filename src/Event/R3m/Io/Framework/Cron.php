@@ -25,12 +25,16 @@ class Cron {
             case 'development':
             case 'staging':
             case 'production':
+            case 'test':
+            case 'replica':
                 $source = $object->config('project.dir.data') . 'Cron' . $object->config('ds') . 'Cron.' . $environment;
             break;
             default:
                 $source = $object->config('project.dir.data') . 'Cron' . $object->config('ds') . 'Cron.development';
         }
-
+        if(!file::exist($source)){
+            return;
+        }
         $dir = '/etc/cron.d/';
         if(!Dir::is($dir)){
             Dir::create($dir, Dir::CHMOD);
@@ -48,6 +52,9 @@ class Cron {
         exec($command);
     }
 
+    /**
+     * @throws Exception
+     */
     public static function start(App $object, $event, $options=[]): void
     {
         if($object->config(Config::POSIX_ID) !== 0){
@@ -57,6 +64,9 @@ class Cron {
         exec($command);
     }
 
+    /**
+     * @throws Exception
+     */
     public static function restart(App $object, $event, $options=[]): void
     {
         if($object->config(Config::POSIX_ID) !== 0){
