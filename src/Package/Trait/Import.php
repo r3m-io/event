@@ -38,7 +38,6 @@ trait Import {
             ;
             $node = new Node($object);
             $response = $node->import($class, $node->role_system(), $options);
-            d($object->config('node'));
             $node->stats($class, $response);
         }
 
@@ -61,7 +60,6 @@ trait Import {
             ;
             $node = new Node($object);
             $response = $node->import($class, $node->role_system(), $options);
-            d($object->config('node'));
             $node->stats($class, $response);
         }
 
